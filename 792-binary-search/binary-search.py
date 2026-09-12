@@ -1,16 +1,17 @@
 class Solution(object):
     def search(self, nums, target):
-        l ,r =0 ,len(nums)-1
+        first =0
+        last =len(nums)-1
 
-        while l <=r:
-            m =(l+r)//2 
-            if nums[m] == target:
-                return m
-            elif nums[m]<target:
-                l =m+1
-            elif nums[m]>target:
-                r=m-1
+        while first <=last:
+            mid =(first +last)//2
+
+            if nums[mid]==target:
+                return mid
+            elif target <nums[mid]:
+                last =mid-1
             else:
-                return m
+                first =mid+1
 
-        return -1       
+        return -1
+        
