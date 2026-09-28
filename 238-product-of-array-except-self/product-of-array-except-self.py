@@ -10,7 +10,7 @@ class Solution(object):
 
         right = 1
         for i in range(n - 1, -1, -1):
-            ans[i] = ans[i] * right
-            right = right * nums[i]
+            ans[i] *= right
+            right *= nums[i]
 
         return ans
