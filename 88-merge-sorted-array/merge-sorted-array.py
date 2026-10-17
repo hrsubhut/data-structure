@@ -11,7 +11,9 @@ class Solution(object):
         merged = sorted(nums1[:m]  + nums2[:n])
 
         for i in range(len(merged)):
-            
+
             nums1[i] = merged[i]
+
+        return nums1
         
         
